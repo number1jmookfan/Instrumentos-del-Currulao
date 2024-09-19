@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://ba81oq2qutocb"]
+
+[ext_resource type="Texture2D" uid="uid://hd6ringvm3bj" path="res://Assets/transparent-cat-by-pngfre-62-1.png" id="1_h5kjd"]
+[ext_resource type="Script" path="res://kitty.gd" id="1_ool68"]
+[ext_resource type="Texture2D" uid="uid://bpdeb74o7wolq" path="res://Assets/7-2-cat-png-4.png" id="2_uc8ws"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gokek"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_h5kjd")
+}],
+"loop": true,
+"name": &"kitty_serious",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_uc8ws")
+}],
+"loop": true,
+"name": &"kitty_stupid",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e5moh"]
+size = Vector2(611, 517)
+
+[node name="Kitty" type="Area2D"]
+position = Vector2(544, 305)
+script = ExtResource("1_ool68")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_gokek")
+animation = &"kitty_serious"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-9.5, -11.5)
+shape = SubResource("RectangleShape2D_e5moh")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

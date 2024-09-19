@@ -1,0 +1,296 @@
+[gd_scene load_steps=29 format=3 uid="uid://3n34a0y2th3y"]
+
+[ext_resource type="PackedScene" uid="uid://dxrojojmx01bl" path="res://fondo.tscn" id="1_33nui"]
+[ext_resource type="Script" path="res://guasa.gd" id="2_enx7c"]
+[ext_resource type="Script" path="res://bombo_adentro.gd" id="3_w7atu"]
+[ext_resource type="Script" path="res://bombo_afuera.gd" id="4_dxj73"]
+[ext_resource type="Script" path="res://cununo_h_adentro.gd" id="5_cjcl3"]
+[ext_resource type="Script" path="res://cununo_h_afuera.gd" id="6_0jxrv"]
+[ext_resource type="Script" path="res://cununo_m_adentro.gd" id="7_w07w3"]
+[ext_resource type="Script" path="res://cununo_m_afuera.gd" id="8_w80qo"]
+[ext_resource type="Script" path="res://marimba_1.gd" id="9_u44c7"]
+[ext_resource type="Script" path="res://marimba_2.gd" id="10_ghksq"]
+[ext_resource type="Script" path="res://marimba_3.gd" id="11_27u04"]
+[ext_resource type="Script" path="res://marimba_4.gd" id="12_ip46m"]
+[ext_resource type="Script" path="res://marimba_5.gd" id="13_61lha"]
+[ext_resource type="Script" path="res://marimba_6.gd" id="14_i5bw2"]
+[ext_resource type="Script" path="res://marimba_7.gd" id="15_jv455"]
+[ext_resource type="Script" path="res://marimba_8.gd" id="16_1lgsx"]
+[ext_resource type="Script" path="res://marimba_9.gd" id="17_cljuo"]
+[ext_resource type="Script" path="res://marimba_10.gd" id="18_dt14v"]
+[ext_resource type="Script" path="res://marimba_11.gd" id="19_w6py7"]
+[ext_resource type="Script" path="res://marimba_12.gd" id="20_fik8b"]
+[ext_resource type="Script" path="res://marimba_13.gd" id="21_cwmie"]
+[ext_resource type="Script" path="res://marimba_14.gd" id="22_3noiq"]
+[ext_resource type="Script" path="res://marimba_15.gd" id="23_pck1i"]
+[ext_resource type="Script" path="res://marimba_16.gd" id="24_5q6yv"]
+[ext_resource type="Script" path="res://marimba_17.gd" id="25_yejkm"]
+[ext_resource type="Script" path="res://marimba_18.gd" id="26_i0kos"]
+[ext_resource type="Script" path="res://marimba_19.gd" id="27_blpnj"]
+[ext_resource type="Script" path="res://marimba_20.gd" id="28_sg6id"]
+
+[node name="Main" type="Node"]
+
+[node name="Fondo" parent="." instance=ExtResource("1_33nui")]
+
+[node name="Guasa" type="Area2D" parent="."]
+script = ExtResource("2_enx7c")
+new_sound = "res://Sounds/guasa.wav"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Guasa"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Guasa"]
+polygon = PackedVector2Array(68, 151, 367, 159, 382, 171, 385, 186, 385, 209, 378, 214, 230, 225, 90, 225, 67, 218, 64, 199, 66, 173)
+
+[node name="Bombo_Adentro" type="Area2D" parent="."]
+script = ExtResource("3_w7atu")
+new_sound = "res://Sounds/bombo_adentro.wav"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bombo_Adentro"]
+polygon = PackedVector2Array(51, 437, 62, 447, 74, 474, 79, 528, 78, 592, 75, 637, 64, 652, 50, 621, 36, 577, 42, 509, 38, 473)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Bombo_Adentro"]
+
+[node name="Bombo_Afuera" type="Area2D" parent="."]
+script = ExtResource("4_dxj73")
+new_sound = "res://Sounds/bombo_afuera.wav"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bombo_Afuera"]
+polygon = PackedVector2Array(96, 418, 317, 410, 338, 645, 96, 657)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Bombo_Afuera"]
+
+[node name="CununoH_Adentro" type="Area2D" parent="."]
+script = ExtResource("5_cjcl3")
+new_sound = "res://Sounds/cununoH_adentro.wav"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CununoH_Adentro"]
+polygon = PackedVector2Array(476, 94, 522, 94, 564, 96, 581, 107, 577, 120, 538, 132, 478, 130, 453, 118, 460, 100)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CununoH_Adentro"]
+
+[node name="CununoH_Afuera" type="Area2D" parent="."]
+script = ExtResource("6_0jxrv")
+new_sound = "res://Sounds/cununoH_afuera.wav"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CununoH_Afuera"]
+polygon = PackedVector2Array(444, 119, 461, 132, 501, 138, 561, 135, 586, 119, 593, 144, 557, 165, 508, 166, 442, 156)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CununoH_Afuera"]
+
+[node name="CununoM_Adentro" type="Area2D" parent="."]
+script = ExtResource("7_w07w3")
+new_sound = "res://Sounds/cununoM_adentro.wav"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CununoM_Adentro"]
+polygon = PackedVector2Array(1086, 239, 1022, 229, 981, 218, 980, 201, 1000, 186, 1046, 181, 1076, 181, 1118, 183, 1158, 197, 1164, 211, 1142, 230, 1108, 238)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CununoM_Adentro"]
+
+[node name="CununoM_Afuera" type="Area2D" parent="."]
+script = ExtResource("8_w80qo")
+new_sound = "res://Sounds/cununoM_afuera.wav"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CununoM_Afuera"]
+polygon = PackedVector2Array(971, 219, 1019, 234, 1078, 243, 1135, 239, 1162, 222, 1171, 209, 1183, 229, 1167, 245, 1130, 259, 1075, 269, 1022, 258, 968, 241)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CununoM_Afuera"]
+
+[node name="Marimba1" type="Area2D" parent="."]
+script = ExtResource("9_u44c7")
+new_sound = "res://Sounds/marimba_1.wav"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Marimba1"]
+polygon = PackedVector2Array(418, 516, 418, 508, 448, 452, 465, 452, 464, 457, 440, 514)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Marimba1"]
+
+[node name="Marimba2" type="Area2D" parent="."]
+script = ExtResource("10_ghksq")
+new_sound = "res://Sounds/marimba_2.wav"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Marimba2"]
+polygon = PackedVector2Array(445, 518, 445, 510, 470, 453, 488, 452, 470, 517)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Marimba2"]
+
+[node name="Marimba3" type="Area2D" parent="."]
+script = ExtResource("11_27u04")
+new_sound = "res://Sounds/marimba_3.wav"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Marimba3"]
+polygon = PackedVector2Array(483, 517, 492, 452, 509, 453, 504, 516)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Marimba3"]
+
+[node name="Marimba4" type="Area2D" parent="."]
+script = ExtResource("12_ip46m")
+new_sound = "res://Sounds/marimba_4.wav"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Marimba4"]
+polygon = PackedVector2Array(512, 513, 516, 451, 534, 451, 536, 512)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Marimba4"]
+
+[node name="Marimba5" type="Area2D" parent="."]
+script = ExtResource("13_61lha")
+new_sound = "res://Sounds/marimba_5.wav"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Marimba5"]
+polygon = PackedVector2Array(544, 514, 538, 451, 556, 449, 565, 513)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Marimba5"]
+
+[node name="Marimba6" type="Area2D" parent="."]
+script = ExtResource("14_i5bw2")
+new_sound = "res://Sounds/marimba_6.wav"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Marimba6"]
+polygon = PackedVector2Array(573, 510, 560, 450, 578, 449, 595, 511)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Marimba6"]
+
+[node name="Marimba7" type="Area2D" parent="."]
+script = ExtResource("15_jv455")
+new_sound = "res://Sounds/marimba_7.wav"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Marimba7"]
+polygon = PackedVector2Array(598, 510, 584, 450, 602, 450, 621, 511)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Marimba7"]
+
+[node name="Marimba8" type="Area2D" parent="."]
+script = ExtResource("16_1lgsx")
+new_sound = "res://Sounds/marimba_8.wav"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Marimba8"]
+polygon = PackedVector2Array(629, 510, 606, 451, 625, 452, 651, 511)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Marimba8"]
+
+[node name="Marimba9" type="Area2D" parent="."]
+script = ExtResource("17_cljuo")
+new_sound = "res://Sounds/marimba_9.wav"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Marimba9"]
+polygon = PackedVector2Array(661, 508, 629, 449, 648, 451, 681, 503, 680, 509, 664, 509)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Marimba9"]
+
+[node name="Marimba10" type="Area2D" parent="."]
+script = ExtResource("18_dt14v")
+new_sound = "res://Sounds/marimba_10.wav"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Marimba10"]
+polygon = PackedVector2Array(688, 506, 654, 451, 670, 449, 708, 501, 707, 507)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Marimba10"]
+
+[node name="Marimba11" type="Area2D" parent="."]
+script = ExtResource("19_w6py7")
+new_sound = "res://Sounds/marimba_11.wav"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Marimba11"]
+polygon = PackedVector2Array(717, 501, 680, 451, 696, 449, 734, 495, 733, 501)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Marimba11"]
+
+[node name="Marimba12" type="Area2D" parent="."]
+script = ExtResource("20_fik8b")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Marimba12"]
+polygon = PackedVector2Array(739, 497, 701, 450, 719, 449, 759, 496)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Marimba12"]
+
+[node name="Marimba13" type="Area2D" parent="."]
+script = ExtResource("21_cwmie")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Marimba13"]
+polygon = PackedVector2Array(761, 496, 725, 451, 742, 451, 780, 492, 780, 498)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Marimba13"]
+
+[node name="Marimba14" type="Area2D" parent="."]
+script = ExtResource("22_3noiq")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Marimba14"]
+polygon = PackedVector2Array(787, 498, 747, 453, 763, 451, 802, 490, 804, 497)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Marimba14"]
+
+[node name="Marimba15" type="Area2D" parent="."]
+script = ExtResource("23_pck1i")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Marimba15"]
+polygon = PackedVector2Array(807, 489, 767, 451, 783, 450, 823, 487, 823, 492, 809, 492)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Marimba15"]
+
+[node name="Marimba16" type="Area2D" parent="."]
+script = ExtResource("24_5q6yv")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Marimba16"]
+polygon = PackedVector2Array(826, 484, 788, 449, 805, 449, 837, 479, 838, 484)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Marimba16"]
+
+[node name="Marimba17" type="Area2D" parent="."]
+script = ExtResource("25_yejkm")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Marimba17"]
+polygon = PackedVector2Array(843, 480, 811, 450, 824, 449, 857, 478)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Marimba17"]
+
+[node name="Marimba18" type="Area2D" parent="."]
+script = ExtResource("26_i0kos")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Marimba18"]
+polygon = PackedVector2Array(865, 475, 829, 450, 843, 448, 875, 473)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Marimba18"]
+
+[node name="Marimba19" type="Area2D" parent="."]
+script = ExtResource("27_blpnj")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Marimba19"]
+polygon = PackedVector2Array(883, 472, 848, 448, 858, 447, 895, 471)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Marimba19"]
+
+[node name="Marimba20" type="Area2D" parent="."]
+script = ExtResource("28_sg6id")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Marimba20"]
+polygon = PackedVector2Array(904, 474, 868, 449, 882, 445, 918, 472)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Marimba20"]
+
+[connection signal="input_event" from="Guasa" to="Guasa" method="_on_input_event"]
+[connection signal="input_event" from="Bombo_Adentro" to="Bombo_Adentro" method="_on_input_event"]
+[connection signal="input_event" from="Bombo_Afuera" to="Bombo_Afuera" method="_on_input_event"]
+[connection signal="input_event" from="CununoH_Adentro" to="CununoH_Adentro" method="_on_input_event"]
+[connection signal="input_event" from="CununoH_Afuera" to="CununoH_Afuera" method="_on_input_event"]
+[connection signal="input_event" from="CununoM_Adentro" to="CununoM_Adentro" method="_on_input_event"]
+[connection signal="input_event" from="CununoM_Afuera" to="CununoM_Afuera" method="_on_input_event"]
+[connection signal="input_event" from="Marimba1" to="Marimba1" method="_on_input_event"]
+[connection signal="input_event" from="Marimba2" to="Marimba2" method="_on_input_event"]
+[connection signal="input_event" from="Marimba3" to="Marimba3" method="_on_input_event"]
+[connection signal="input_event" from="Marimba4" to="Marimba4" method="_on_input_event"]
+[connection signal="input_event" from="Marimba5" to="Marimba5" method="_on_input_event"]
+[connection signal="input_event" from="Marimba6" to="Marimba6" method="_on_input_event"]
+[connection signal="input_event" from="Marimba7" to="Marimba7" method="_on_input_event"]
+[connection signal="input_event" from="Marimba8" to="Marimba8" method="_on_input_event"]
+[connection signal="input_event" from="Marimba9" to="Marimba9" method="_on_input_event"]
+[connection signal="input_event" from="Marimba10" to="Marimba10" method="_on_input_event"]
+[connection signal="input_event" from="Marimba11" to="Marimba11" method="_on_input_event"]
+[connection signal="input_event" from="Marimba12" to="Marimba12" method="_on_input_event"]
+[connection signal="input_event" from="Marimba13" to="Marimba13" method="_on_input_event"]
+[connection signal="input_event" from="Marimba14" to="Marimba14" method="_on_input_event"]
+[connection signal="input_event" from="Marimba15" to="Marimba15" method="_on_input_event"]
+[connection signal="input_event" from="Marimba16" to="Marimba16" method="_on_input_event"]
+[connection signal="input_event" from="Marimba17" to="Marimba17" method="_on_input_event"]
+[connection signal="input_event" from="Marimba18" to="Marimba18" method="_on_input_event"]
+[connection signal="input_event" from="Marimba19" to="Marimba19" method="_on_input_event"]
+[connection signal="input_event" from="Marimba20" to="Marimba20" method="_on_input_event"]
